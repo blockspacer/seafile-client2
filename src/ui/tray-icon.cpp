@@ -292,19 +292,17 @@ void SeafileTrayIcon::toggleMainWindow()
 
 void SeafileTrayIcon::about()
 {
+    seafApplet->mainWindow()->setWindowIcon(QIcon(":/images/maxer-logo-for-aboutbox.png"));
     QMessageBox::about(seafApplet->mainWindow(), tr("About %1").arg(getBrand()),
                        tr("<h2>%1 Client %2</h2>").arg(getBrand()).arg(
                            STRINGIZE(SEAFILE_CLIENT_VERSION)));
+    seafApplet->mainWindow()->setWindowIcon(QIcon(":/images/seafile.png"));
 }
 
 void SeafileTrayIcon::openHelp()
 {
     QString url;
-    if (QLocale::system().name() == "zh_CN") {
-        url = "http://seafile.com/help/install_v2/";
-    } else {
-        url = "http://seafile.com/en/help/install_v2/";
-    }
+    url = "https://drive.maxer.hu/en/help/install_v2/";
 
     QDesktopServices::openUrl(QUrl(url));
 }

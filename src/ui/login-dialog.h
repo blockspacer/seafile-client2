@@ -26,7 +26,7 @@ private slots:
     void loginFailed(int code);
     void onNetworkError(const QNetworkReply::NetworkError& error, const QString& error_string);
     void onSslErrors(QNetworkReply *reply, const QList<QSslError>& errors);
-
+    void replyFinished(QNetworkReply* reply);
 private:
     Q_DISABLE_COPY(LoginDialog);
     bool validateInputs();
@@ -38,6 +38,7 @@ private:
     QString username_;
     QString password_;
     LoginRequest *request_;
+    QNetworkAccessManager *manager_;
 };
 
 #endif // SEAFILE_CLIENT_LOGIN_DIALOG_H

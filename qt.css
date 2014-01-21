@@ -176,6 +176,7 @@ QWidget#mHeader QLabel#mLogo {
     margin-right: 4px;
     font-size: 14px;
     font-family: Arial;
+    min-height: 24px;
 }
 
 RepoTreeView
