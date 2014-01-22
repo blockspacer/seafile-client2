@@ -3,7 +3,7 @@
 ######################################################################
 
 TEMPLATE = app
-TARGET = seafile-applet
+TARGET = MAXER-Drive
 DEPENDPATH += . \
               i18n \
               src \

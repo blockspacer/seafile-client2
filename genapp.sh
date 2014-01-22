@@ -8,7 +8,7 @@ dylibs="/usr/local/lib/libccnet.0.dylib /usr/local/lib/libseafile.0.dylib /usr/l
 exes="`which ccnet` `which seaf-daemon`"
 all=$dylibs" ${exes}"
 
-target=seafile-applet
+target=MAXER-Drive
 function change_otool() {
     DIR=$1
     pushd ${DIR}
