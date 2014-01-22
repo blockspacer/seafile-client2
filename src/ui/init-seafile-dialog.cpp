@@ -122,8 +122,8 @@ void InitSeafileDialog::onOkClicked()
     dir.mkpath("Maxer Drive/maxerdrive-data");
     QString seafile_dir = dir.filePath("Maxer Drive/maxerdrive-data");
 #else
-    dir.mkpath("Seafile/.seafile-data");
-    QString seafile_dir = dir.filePath("Seafile/.seafile-data");
+    dir.mkpath("Maxer Drive/.maxerdrive-data");
+    QString seafile_dir = dir.filePath("Maxer Drive/.maxerdrive-data");
 #endif
 
     emit seafileDirSet(seafile_dir);
